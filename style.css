@@ -3,23 +3,43 @@ body {
   background-size:cover;
   background-repeat:no-repeat;
   padding-top: 10px;
+  background-position: center-center;
 }
+.name h1{
+  position:absolute;
+  top: 5%;
+  left: 30%;
+  color: black; 
+  font-family: helvetica;
+  font-size: 100px;
+  font-weight: bold;
+}
+.about p{
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  color: black; 
+  font-family: helvetica;
+  font-size: 18px;
+  font-weight: light;
+  margin: 60px auto;
+  width: 40%;
+}
+
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
-    color: black;
     list-style: none;
     font-weight: bold;
     position: fixed;
     left: 30px;
-    color: black;
 }
 nav ul li, footer ul li {
     display: margin-right: 0px;
 }
 a {
     text-decoration: none;
-    color: #999;
+    color: black;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     font-size: 1.45em;
 }
@@ -42,12 +62,7 @@ h3 {
 p {
     font-size: 1.25em;
     line-height: 1.25em;
-    color: #333;
     font-family:'Calibri', 'Arial', 'Sans-Serif';
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
 }
 
 ul.posts { 
