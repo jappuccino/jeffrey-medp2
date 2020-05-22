@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="slideshow.css">
+</head>
+<body>
+  <h1>Slideshow</h1>
+<div class="nav">
+  <label for="toggle" id="toggle_label">&#9776;</label>
+    <input type="checkbox" id="toggle"/>
+      <ul class="mainmenu">
+        <li><a href="mainnav.html">Home</a>
+        <li><a href="about.html">About</a>
+        <li><a href="#2">Projects</a>
+      <ul class="submenu">
+        <li><a href="randomized_poem.html">Randomized Poem</a></li>
+        <li><a href="slideshow.html">Image Slide</a></li>
+        <li><a href="svg.html">SVG Animation</a></li>
+        <li><a href="zine.html">S.O.L 1</a></li>
+      </ul>
+    <li><a href="ig.html">Photos</a></li>
+    <a href='www.linkedin.com/in/jeffrey-giron'><i class='fab fa-linkedin' style='font-size:36px'></i></a>
+    <a href='https://www.instagram.com/jephrezy/'><i class='fab fa-instagram' style='font-size:36px'></i></a>
+  </ul>
+</div>
+<div>
+  <div class="slideshow-container">
+
+  <!-- slide show divs -->
+  <div id="slide1" class="mySlides">
+    <div class="description">
+      <p class="author">My work 1 (2018)</p>
+      <a href="ig.html" class="link">Go to the page</a>
+    </div>
+  </div>
+
+  <div id="slide2" class="mySlides">
+    <div class="description">
+      <p class="author">My work 2 (2019)</p>
+      <a class="ig.html">Go to the page</a>
+    </div>
+  </div>
+
+  <div id="slide3" class="mySlides">
+    <div class="description">
+      <p class="author">My work 3 (2020)</p>
+      <a class="ig.html">Go to the page</a>
+    </div>
+  </div>
+
+  <div id="slide4" class="mySlides">
+    <div class="description">
+      <p class="author">My work 4 (2020)</p>
+      <a class="ig.html">Go to the page</a>
+    </div>
+  </div>
+
+  <div id="slide5" class="mySlides">
+    <div class="description">
+      <p class="author">My work 5 (2020)</p>
+      <a class="ig.html">Go to the page</a>
+    </div>
+  </div>
+
+  <!-- left/right side button -->
+  <a class="prev" onclick="setIndexFromSideButton(-1)">❮</a>
+  <a class="next" onclick="setIndexFromSideButton(1)">❯</a>
+
+  </div>
+
+</div>
+
+<script>
+
+// before user clicks any of side arrow buttons, initiate the slide show with the first slide image. 
+var slideIndex = 1;
+showSlides(slideIndex);
+
+
+function setIndexFromSideButton(n){
+
+  // increment index number depends on the value 'n' so that we can figure out which slide has to be shown on the webpage
+  slideIndex = slideIndex + n;
+
+
+  // call and execute the function showSlides()
+  showSlides();
+
+}
+
+function showSlides() {
+
+  // ask browser search and get every HTML element with the class name 'mySlides' and assign those elements to variable 'slides'
+  var slideDivElements = document.getElementsByClassName("mySlides"); 
+
+
+  // if the variable slideIndex is larger than the number of slides, reset the slideIndex to 1 so that user can get back to the first slide  
+  if (slideIndex > slideDivElements.length) {slideIndex = 1} 
+
+
+  // if the variable slideIndex is smaller than 1, reset the slideIndex to the biggest index number so that user can get to the last slide
+  if (slideIndex < 1) {slideIndex = slideDivElements.length} 
+
+
+  // change the style - display property of every slide (the elements inside 'slideDivElements' ) to 'none'
+  for (var i = 0; i < slideDivElements.length; i++) {
+      slideDivElements[i].style.display = "none";  
+  }
+
+
+  // change the style - display property of the slide which has to be shown on webpage to 'block'
+  slideDivElements[slideIndex-1].style.display = "block";  
+
+}
+</script>
+
+</body>
+</html> 
